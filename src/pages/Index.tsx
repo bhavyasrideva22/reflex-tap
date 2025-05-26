@@ -1,4 +1,3 @@
-
 import React from "react";
 import { Link } from "react-router-dom";
 import { useGame } from "@/contexts/GameContext";
@@ -52,12 +51,9 @@ const Index: React.FC = () => {
           </Link>
         </div>
 
-        {/* All Games */}
-        <div>
-          <Heading as="h2" className="mb-4 text-lg font-medium">
-            All Games
-          </Heading>
-          <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
+        {/* Game Card */}
+        <div className="flex justify-center">
+          <div className="w-full max-w-md">
             {games.map((game) => (
               <GameCard key={game.id} game={game} />
             ))}
